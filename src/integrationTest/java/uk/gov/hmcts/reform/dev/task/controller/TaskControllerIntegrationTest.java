@@ -19,7 +19,7 @@ class TaskControllerIntegrationTest {
                     {
                       "title": "Integration Test Task",
                       "status": "TODO",
-                      "dueDate": "2026-04-27T18:00:00"
+                      "dueDate": "2026-04-27"
                     }
                 """)
                 .when()
@@ -56,7 +56,7 @@ class TaskControllerIntegrationTest {
                 {
                   "title": "Task to update",
                   "status": "TODO",
-                  "dueDate": "2026-04-27T18:00:00"
+                  "dueDate": "2026-04-27"
                 }
             """)
                 .when()
@@ -88,7 +88,7 @@ class TaskControllerIntegrationTest {
                 {
                   "title": "Task to delete",
                   "status": "TODO",
-                  "dueDate": "2026-04-27T18:00:00"
+                  "dueDate": "2026-04-27"
                 }
             """)
                 .when()

@@ -52,7 +52,7 @@ Password: empty
 ## Running Tests
 ```bash
 ./gradlew test
-./gradlew integration
+./gradlew integrationTest
 ./gradlew check
 ```
 
