@@ -7,6 +7,7 @@ import uk.gov.hmcts.reform.dev.task.model.Task;
 import uk.gov.hmcts.reform.dev.task.model.TaskStatus;
 import uk.gov.hmcts.reform.dev.task.repository.TaskRepository;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -31,7 +32,7 @@ class TaskServiceTest {
             .id(1L)
             .title("Test task")
             .status(TaskStatus.TODO)
-            .dueDate(LocalDateTime.now().plusDays(1))
+            .dueDate(LocalDate.now().plusDays(1))
             .build();
 
         when(taskRepository.findAll()).thenReturn(List.of(task));
@@ -86,14 +87,14 @@ class TaskServiceTest {
             .title("Old title")
             .description("Old description")
             .status(TaskStatus.TODO)
-            .dueDate(LocalDateTime.now().plusDays(1))
+            .dueDate(LocalDate.now().plusDays(1))
             .build();
 
         Task updatedDetails = Task.builder()
             .title("New title")
             .description("New description")
             .status(TaskStatus.IN_PROGRESS)
-            .dueDate(LocalDateTime.now().plusDays(2))
+            .dueDate(LocalDate.now().plusDays(2))
             .build();
 
         when(taskRepository.findById(1L)).thenReturn(Optional.of(existingTask));
